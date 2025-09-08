@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith Restorer - Believe in Yourself</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --light-blue: #a7d7c5;
+            --light-orange: #f9c784;
+            --soft-white: #fcfcfc;
+            --dark-blue: #4b6587;
+            --light-gray: #f5f5f5;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-orange) 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(120deg, var(--light-blue) 0%, var(--light-orange) 100%);
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            padding: 30px;
+        }
+
+        .quote-section {
+            background-color: var(--soft-white);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .quote {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.4;
+        }
+
+        .btn {
+            background: linear-gradient(to right, var(--light-blue), var(--light-orange));
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            background-color: var(--soft-white);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .affirmation-section {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .affirmation {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(120deg, var(--light-blue) 0%, var(--light-orange) 100%);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .quote {
+                font-size: 1.4rem;
+                min-height: 200px;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Faith Restorer</h1>
+            <p class="tagline">Renew your self-belief and unlock your inner strength whenever you need it most</p>
+        </header>
+
+        <div class="main-content">
+            <div class="quote-section">
+                <div class="quote" id="mainQuote">You are capable of amazing things. Trust in your abilities and know that you have everything within you to succeed.</div>
+                <button class="btn" id="newQuoteBtn"><i class="fas fa-sync-alt"></i> New Inspiration</button>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <h3>You Are Worthy</h3>
+                    <p>Remember that your worth is not determined by your achievements or others' opinions. You are inherently valuable.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-rocket"></i>
+                    <h3>You Have Potential</h3>
+                    <p>Within you lies incredible potential waiting to be unleashed. Trust in your capacity to grow and learn.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>You Are Enough</h3>
+                    <p>In this moment, exactly as you are, you are complete and enough. There is nothing you need to become to be worthy.</p>
+                </div>
+            </div>
+
+            <div class="affirmation-section">
+                <h2>Daily Affirmation</h2>
+                <div class="affirmation" id="affirmation">I trust myself and my journey. I am capable of handling whatever comes my way.</div>
+                <button class="btn" id="newAffirmationBtn"><i class="fas fa-magic"></i> New Affirmation</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Remember: You are stronger than you think. Return whenever you need to restore your faith in yourself.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Quotes for inspiration
+        const quotes = [
+            "You have survived every challenge life has thrown at you so far. Trust that you will survive this too.",
+            "Your current difficulties are not your final destination. Keep moving forward.",
+            "Self-doubt is a natural part of growth. It means you're stepping out of your comfort zone.",
+            "You are not defined by your mistakes but by how you rise after falling.",
+            "The fact that you worry about being good enough proves that you care deeply—and that is half the battle.",
+            "Progress is rarely linear. Celebrate the small steps forward, no matter how tiny they seem.",
+            "You have unique talents and perspectives that no one else in the world possesses. That is your power.",
+            "Your value doesn't decrease based on someone's inability to see your worth.",
+            "It's okay to be a work in progress. Masterpieces take time.",
+            "You are allowed to be both a masterpiece and a work in progress simultaneously.",
+            "Courage doesn't always roar. Sometimes courage is the quiet voice at the end of the day saying 'I will try again tomorrow.'",
+            "Your mind may doubt your capabilities, but your heart knows your true strength. Listen to your heart."
+        ];
+
+        // Affirmations
+        const affirmations = [
+            "I trust myself and my journey. I am capable of handling whatever comes my way.",
+            "I am worthy of love, success, and happiness simply because I exist.",
+            "I release comparison and embrace my unique path and timing.",
+            "I choose to speak kindly to myself today. I am doing my best, and that is enough.",
+            "I am constantly growing and evolving into a better version of myself.",
+            "I have the power to create positive change in my life.",
+            "I am resilient, strong, and capable of overcoming any challenge.",
+            "I believe in my abilities to figure things out and succeed.",
+            "I am enough, exactly as I am in this moment.",
+            "I deserve to take up space and have my voice heard.",
+            "My past does not define me. I am creating my future with each choice I make today.",
+            "I am becoming the person I aspire to be, one step at a time."
+        ];
+
+        // DOM Elements
+        const quoteElement = document.getElementById('mainQuote');
+        const affirmationElement = document.getElementById('affirmation');
+        const newQuoteBtn = document.getElementById('newQuoteBtn');
+        const newAffirmationBtn = document.getElementById('newAffirmationBtn');
+
+        // Function to get random item from array
+        function getRandomItem(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        // Set initial random quote and affirmation
+        quoteElement.textContent = getRandomItem(quotes);
+        affirmationElement.textContent = getRandomItem(affirmations);
+
+        // Event listeners for buttons
+        newQuoteBtn.addEventListener('click', () => {
+            quoteElement.style.opacity = 0;
+            setTimeout(() => {
+                quoteElement.textContent = getRandomItem(quotes);
+                quoteElement.style.opacity = 1;
+            }, 500);
+        });
+
+        newAffirmationBtn.addEventListener('click', () => {
+            affirmationElement.style.opacity = 0;
+            setTimeout(() => {
+                affirmationElement.textContent = getRandomItem(affirmations);
+                affirmationElement.style.opacity = 1;
+            }, 500);
+        });
+
+        // Add smooth transitions
+        document.querySelectorAll('.quote, .affirmation').forEach(el => {
+            el.style.transition = 'opacity 0.5s ease';
+        });
+    </script>
+</body>
+</html>
